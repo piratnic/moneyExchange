@@ -23,8 +23,8 @@ public class Main {
     }
 
     static double calculation(int weight, double height) {
-        double imt = weight/(height*height);
-        return imt;
+        return weight / (height * height);
+
 
     }
 
