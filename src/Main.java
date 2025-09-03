@@ -6,7 +6,7 @@ public class Main {
 
     }
 
-    static void start () {
+    static double start () {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите вес");
         int weight = scanner.nextInt();
@@ -20,12 +20,17 @@ public class Main {
 
         start();
 
+        return height;
     }
 
     static double calculation(int weight, double height) {
-        return weight / (height * height);
+        while (weight > 0 && height > 0) {
+            return weight / (height * height);
+        }
+        System.out.println("Введите корретные значения");
 
 
+        return start();
     }
 
     static String interpretation(double result) {
@@ -50,6 +55,8 @@ public class Main {
 
         return "неправильно";
     }
+
+
 
 
 
